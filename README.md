@@ -4,8 +4,7 @@ A data structure used for range queries. It uses Balanced binary search tree for
 
 # Properties
 
--> It stores data in leaf nodes in a sorted manner./n
--> Every internal node in n-dimensional space stores an associated tree./n
+-It stores data in leaf nodes in a sorted manner. Every internal node in n-dimensional space stores an associated tree.
 
 # Implementation
 
