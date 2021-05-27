@@ -8,6 +8,7 @@ A data structure used for range queries. It uses Balanced binary search tree for
 
 - It stores data in leaf nodes in a sorted manner. 
 - Every internal node in n-dimensional space stores an associated tree.
+- Search Complexity for n-dimensional space O(log^d n + k)
 
 ## Implementation
 
