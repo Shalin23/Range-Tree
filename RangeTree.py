@@ -87,6 +87,16 @@ def ConstructRangeTree2d(data, parent, enable=True):
 
 
 def withinRange(point, range, check):
+     '''
+    Checks if the value of node is within the required range
+
+    Arguments:
+        point       : A point in tree
+        range       : A list containing range to be checked with
+        check       : specifies which option should be performed
+    Returns :
+        True if in range else False
+    '''
     if check == 1:
         x = point
         if (x >= range[0][0] and x <= range[0][1]):
@@ -103,6 +113,15 @@ def withinRange(point, range, check):
 
 
 def getValue(point, enable, dim):
+    '''
+    Reads the desired value from node
+
+    Arguments:
+        point       : A point in tree
+        enable      : True when we need to read first coord of point when used as a helper function by 2D range search
+        dimension   : specifies the dimension of range tree.
+    Returns : value of node
+    '''
     if dim == 1:
         value = point.value
     elif dim == 2:
@@ -114,6 +133,18 @@ def getValue(point, enable, dim):
 
 
 def FindSplitNode(root, p_min, p_max, dim, enable):
+    '''
+    Searches for a common node that splits the range
+
+    Arguments:
+        tree        : A Node in tree
+        p_min       : Starting range 
+        p_max       : Ending range 
+        dimension   : specifies the dimension of range tree.
+        enable      : True when we need to read first coord of point when used as a helper function by 2D range search
+
+    Returns : A Node
+    '''
     splitnode = root
     while splitnode != None:
         node = getValue(splitnode, enable, dim)
@@ -127,6 +158,18 @@ def FindSplitNode(root, p_min, p_max, dim, enable):
 
 
 def SearchRangeTree1d(tree, p1, p2, dim = 1, enable = True):
+    '''
+    Performs 1D range search
+
+    Arguments:
+        tree        : A Node in tree
+        p1          : Starting range 
+        p2          : Ending range 
+        dimension   : specifies the dimension of range tree. By default 1
+        enable      : True when we need to read first coord of point when used as a helper function by 2D range search
+
+    Returns : list of result of range query
+    '''
     nodes = []
     splitnode = FindSplitNode(tree, p1, p2, dim, enable)
     if splitnode == None:
@@ -138,6 +181,19 @@ def SearchRangeTree1d(tree, p1, p2, dim = 1, enable = True):
     return nodes
 
 def SearchRangeTree2d(tree, x1, x2, y1, y2, dim = 2):
+    '''
+    Performs 2D range search
+
+    Arguments:
+        tree        : A Node in tree
+        x1          : Starting range for x-coord
+        x2          : Ending range for x-coord
+        y1          : Starting range for y-coord
+        y2          : Ending range for y-coord
+        dimension   : specifies the dimension of range tree. By default 2
+
+    Returns : Results from 2D search
+    '''
     results = []
     splitnode = FindSplitNode(tree, x1, x2, 2, True)
     if (splitnode != None):
@@ -174,29 +230,39 @@ def SearchRangeTree2d(tree, x1, x2, y1, y2, dim = 2):
 
 
 def displayData(all: dict, final: list, dimension):
-    
+    '''
+    Displays results in a csv file
+
+    Arguments:
+        all         : All Data initially read from csv
+        final       : Results from range query
+        dimension   : specifies the dimension of range tree.
+    Returns : None
+    '''
     # open the file in the write mode
     if dimension == 1:
         f = open('RangeQuery1D.csv', 'w')
-        f.truncate(0)
-        # create the csv writer
-        writer = csv.writer(f)
+    else:
+        f = open('RangeQuery2D.csv', 'w')
+    f.truncate(0)
+    # create the csv writer
+    writer = csv.writer(f)
 
-        headings = ["Country", "Date", "Total Cases", "New Cases", "Total Deaths", "New Deaths", 
-        "Total Cases/Million", "Total Deaths/Million", "ICU Patients/Million", "Hospital Patients/Million", 
-        "Total Tests/Million", "New tests/Million", "Positive Rate", "Total Vaccinations", "People Vaccinated", 
-        "People Fully Vaccinated", "New Vaccinations", "Population", "GDP / capita" ]
+    headings = ["Country", "Date", "Total Cases", "New Cases", "Total Deaths", "New Deaths", 
+    "Total Cases/Million", "Total Deaths/Million", "ICU Patients/Million", "Hospital Patients/Million", 
+    "Total Tests/Million", "New tests/Million", "Positive Rate", "Total Vaccinations", "People Vaccinated", 
+    "People Fully Vaccinated", "New Vaccinations", "Population", "GDP / capita" ]
 
-        writer.writerow(headings)
-        for key in final:
-            display = [key[0], key[1]]
-            for val in all[(key[0], key[1])]:
-                if val == '':
-                    val = 0
-                display.append(val)
-            writer.writerow(display)
-        f.close()
-
+    writer.writerow(headings)
+    for key in final:
+        display = [key[0], key[1]]
+        for val in all[(key[0], key[1])]:
+            if val == '':
+                val = 0
+            display.append(val)
+        writer.writerow(display)
+    f.close()
+    if dimension == 2:
         file = "RangeQuery1D.csv"
         os.startfile(file)
     else:
@@ -237,12 +303,12 @@ def main(Countries,  date1, date2,  param1=None, x1=None, x2=None, dimension=1):
                 d = tup.strftime("%d/%m/%Y")
                 tup_new = (country, d)
                 final.append(tup_new)
-        # elif dimension == 2:
-        #     tree = ConstructRangeTree2d(values, None)
-        #     search = SearchRangeTree2d( tree, date1.date(), date2.date(), x1, x2, 2)
-        #     for tup in search:
-        #         d = tup[0].strftime("%d/%m/%Y")
-        #         tup_new = (country, d, tup[1])
-        #         final.append(tup_new)
+        elif dimension == 2:
+            tree = ConstructRangeTree2d(values, None)
+            search = SearchRangeTree2d( tree, date1.date(), date2.date(), x1, x2, 2)
+            for tup in search:
+                d = tup[0].strftime("%d/%m/%Y")
+                tup_new = (country, d, tup[1])
+                final.append(tup_new)
     displayData(all_data, sorted(final), dimension)
 # main(['Afghanistan'] , '03/03/2020', '06/03/2020', 3, 2, 6, dimension=2)
