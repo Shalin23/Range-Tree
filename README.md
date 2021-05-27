@@ -11,8 +11,8 @@ A data structure used for range queries. It uses Balanced binary search tree for
 
 ## Implementation
 
--We have implemented 1D and 2D range tree to process a sample COVID-19 data obtained from https://ourworldindata.org/coronavirus.
--This data structure is best used for searching only and constructs a Range Tree once and stores it for search operations, hence deletion and insertion are not operated on range trees.
+- We have implemented 1D and 2D range tree to process a sample COVID-19 data obtained from https://ourworldindata.org/coronavirus.
+- This data structure is best used for searching only and constructs a Range Tree once and stores it for search operations, hence deletion and insertion are not operated on range trees.
 
 ## Presenation
 
