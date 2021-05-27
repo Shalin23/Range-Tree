@@ -4,6 +4,7 @@
 ## Range-Tree
 
 A data structure used for range queries. It uses Balanced binary search tree for set of data points in n-dimensional space.
+
 ## Properties
 
 - It stores data in leaf nodes in a sorted manner. 
