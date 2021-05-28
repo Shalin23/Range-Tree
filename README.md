@@ -1,5 +1,4 @@
-# Final Project
-# Team : Inverted Additions
+# Final Project : Inverted Additions
 # Topic : Range Trees
 # [CS 201 Data Structures II, Spring 2021, Habib University]
 -------
