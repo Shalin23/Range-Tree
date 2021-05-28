@@ -28,7 +28,7 @@ A data structure used for range queries. It uses Balanced binary search tree for
   - The user then has to enter range for the selected field. for eg. 0 to 1000.
   - On pressing search, all the records that satisfy the desired ranges would appear in a new csv file.
 
-## Presenation
+## Demonstration
 
 For detailed insight on our implemention and demonstration, refer to our video presentation https://www.youtube.com/watch?v=CbNOre1wUho&t=2s
 
