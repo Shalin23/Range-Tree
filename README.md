@@ -32,9 +32,9 @@ A data structure used for range queries. It uses Balanced binary search tree for
 
 For detailed insight on our implemention and demonstration, refer to our video presentation https://www.youtube.com/watch?v=CbNOre1wUho&t=2s
 
-## Contributors
+## Team Members
 
-- Shalin Ali
-- Sana Fatima
-- Areesha Najam
-- Mubaraka Shabbir
+- Shalin Ali : Implemented construction of 1D and 2D range trees.
+- Mubaraka Shabbir : Implemented 1D and 2D range searching
+- Sana Fatima : Interfacing the code with forms
+- Areesha Najam : Interfacing the code with forms
