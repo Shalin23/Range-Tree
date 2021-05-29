@@ -22,9 +22,9 @@ A data structure used for range queries. It uses Balanced binary search tree for
 - We have implemented 1D and 2D range tree to process COVID-19 data of South Asian countries obtained from https://ourworldindata.org/coronavirus.
 
 - Pre-Requirements:
-   -In order to run our application for the testing (searching) purposes you need to install tkinter. Tkinter is the standard GUI library for Python which provides a fast and       easy way to create GUI applications. It provides a powerful object-oriented interface to the Tk GUI toolkit. You may write pip install tkinter in your terminal for the said     installation. This will get tkinter installed in your local PC. 
-   -As we have added calendar in our application, we have used  tkcalendar for this purpose. Tkcalendar is a python module that provides the Calendar and DateEntry widgets for       Tkinter. Fpr installation of tkcalendar you may use command i.e.  pip install tkcalendar.
-   -In our code, we have written some import statements which has been associated with the libraries mentioned above which allow us to use specific functionalities of these         libraries.
+   - In order to run our application for the testing (searching) purposes you need to install tkinter. Tkinter is the standard GUI library for Python which provides a fast and       easy way to create GUI applications. It provides a powerful object-oriented interface to the Tk GUI toolkit. You may write pip install tkinter in your terminal for the said     installation. This will get tkinter installed in your local PC. 
+   - As we have added calendar in our application, we have used  tkcalendar for this purpose. Tkcalendar is a python module that provides the Calendar and DateEntry widgets for Tkinter. Fpr installation of tkcalendar you may use command i.e.  pip install tkcalendar.
+   -  In our code, we have written some import statements which has been associated with the libraries mentioned above which allow us to use specific functionalities of these libraries.
    
 - Our interface includes a forms in which the user can perform the following steps to retrieve data:
   - Select a country name or select 'All' countries by default in the drop down list
@@ -43,23 +43,23 @@ For detailed insight on our implemention and demonstration, refer to our video p
 ## Team Members
 - Shalin Ali : Implemented construction of 1D and 2D range trees.
 - Mubaraka Shabbir : Implemented 1D and 2D range searching
-- Sana Fatima : Interfacing the code with forms, linking code (range tree) with GUI forms and preparation of narration (story and slides) for demo.
-- Areesha Najam : Interfacing the code with forms, linking code (range tree) with GUI forms and preparation of narration (story and slides) for demo.
+- Sana Fatima : Linking code (range tree) with GUI forms and preparation of narration (story and slides) for demo.
+- Areesha Najam : Linking code (range tree) with GUI forms and preparation of narration (story and slides) for demo.
 
 ## References
 
--Data Set:
+- Data Set:
   -https://www.who.int/emergencies/diseases/novel-coronavirus-2019?adgroupsurvey={adgroupsurvey}&gclid=CjwKCAjw47eFBhA9EiwAy8kzNPyeMQ8wQYTIwduTrcqZdbx-qbgAjOJHsbfaY4jQxjwfeo66WwO1pBoCxA0QAvD_BwE
 
  
 
--Understanding/Research of Range Trees:
+- Understanding/Research of Range Trees:
   -https://www.cise.ufl.edu/class/cot5520sp18/CG_RangeTrees.pdf
   -http://www.cs.umd.edu/class/fall2020/cmsc420-0201/Lects/lect17-range-tree.pdf
   -https://www.cse.wustl.edu/~taoju/cse546/lectures/Lecture21_rangequery_2d.pdf
 
  
 
--Animated pictures for story telling:
+- Animated pictures for story telling:
   -https://www.dreamstime.com
  
