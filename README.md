@@ -18,13 +18,12 @@ A data structure used for range queries. It uses Balanced binary search tree for
 - Search Complexity for n-dimensional space O(log^d n + k)
 - This data structure is best used for searching only and constructs a Range Tree once and stores it for search operations, hence deletion and insertion are not of much interest.
 
-## Testing/How to Run Our Application
+## How to Run Our Application
 - We have implemented 1D and 2D range tree to process COVID-19 data of South Asian countries obtained from https://ourworldindata.org/coronavirus.
 
-- Pre-Requirements:
-   - In order to run our application for the testing (searching) purposes you need to install tkinter. Tkinter is the standard GUI library for Python which provides a fast and       easy way to create GUI applications. It provides a powerful object-oriented interface to the Tk GUI toolkit. You may write pip install tkinter in your terminal for the said     installation. This will get tkinter installed in your local PC. 
-   - As we have added calendar in our application, we have used  tkcalendar for this purpose. Tkcalendar is a python module that provides the Calendar and DateEntry widgets for Tkinter. Fpr installation of tkcalendar you may use command i.e.  pip install tkcalendar.
-   -  In our code, we have written some import statements which has been associated with the libraries mentioned above which allow us to use specific functionalities of these libraries.
+- Pre-Requirements: In our code, we have used the libraries mentioned below for specific functionalities.
+   - In order to run our application for the testing (searching) purposes you need to install tkinter. Tkinter is the standard GUI library for Python which provides a fast and easy way to create GUI applications. It provides a powerful object-oriented interface to the Tk GUI toolkit. You may write pip install tkinter in your terminal for the said installation. This will get tkinter installed in your local PC. 
+   - As we have added calendar in our application, we have used  tkcalendar for this purpose. Tkcalendar is a python module that provides the Calendar and DateEntry widgets for Tkinter. For installation of tkcalendar you may use command i.e.  pip install tkcalendar.
    
 - Our interface includes a forms in which the user can perform the following steps to retrieve data:
   - Select a country name or select 'All' countries by default in the drop down list
@@ -34,11 +33,8 @@ A data structure used for range queries. It uses Balanced binary search tree for
   - On pressing search, all the records that satisfy the desired ranges would appear in a new csv file.
 
  
-
 ## Demonstration
 For detailed insight on our implemention and demonstration, refer to our video presentation https://www.youtube.com/watch?v=CbNOre1wUho&t=2s
-
- 
 
 ## Team Members
 - Shalin Ali : Implemented construction of 1D and 2D range trees.
