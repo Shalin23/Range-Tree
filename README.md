@@ -48,18 +48,12 @@ For detailed insight on our implemention and demonstration, refer to our video p
 
 ## References
 
-- Data Set:
-  -https://www.who.int/emergencies/diseases/novel-coronavirus-2019?adgroupsurvey={adgroupsurvey}&gclid=CjwKCAjw47eFBhA9EiwAy8kzNPyeMQ8wQYTIwduTrcqZdbx-qbgAjOJHsbfaY4jQxjwfeo66WwO1pBoCxA0QAvD_BwE
-
- 
+- Data Set: https://ourworldindata.org/coronavirus.
 
 - Understanding/Research of Range Trees:
-  -https://www.cise.ufl.edu/class/cot5520sp18/CG_RangeTrees.pdf
-  -http://www.cs.umd.edu/class/fall2020/cmsc420-0201/Lects/lect17-range-tree.pdf
-  -https://www.cse.wustl.edu/~taoju/cse546/lectures/Lecture21_rangequery_2d.pdf
+  - https://www.cise.ufl.edu/class/cot5520sp18/CG_RangeTrees.pdf
+  - http://www.cs.umd.edu/class/fall2020/cmsc420-0201/Lects/lect17-range-tree.pdf
+  - https://www.cse.wustl.edu/~taoju/cse546/lectures/Lecture21_rangequery_2d.pdf 
 
- 
-
-- Animated pictures for story telling:
-  -https://www.dreamstime.com
+- Animated pictures for story telling: https://www.dreamstime.com
  
